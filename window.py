@@ -1,6 +1,7 @@
 import requests, threading
 from video import *
 from spinner import PRMP_QSpinner
+from typing import List
 import datetime, json
 
 MODELS = "models"
@@ -298,7 +299,7 @@ class VideoLabel(QLabel):
             )
             json.dump(RACKS, file)
 
-    def onLocationsReady(self, locations: list[list[int]]):
+    def onLocationsReady(self, locations: List[List[int]]):
         for x1, y1, x2, y2 in locations:
             cow_midpoint = (x1 + x2) // 2, (y1 + y2) // 2
 
