@@ -1,4 +1,5 @@
 import os
+from typing import List
 
 # try:
 #     from PySide6.QtGui import *
@@ -97,7 +98,7 @@ class GridLayout(QGridLayout):
 
     def populate(
         self,
-        widgets: list[QWidget],
+        widgets: List[QWidget],
         columns: int = 2,
         spacing: int = 10,
     ):
