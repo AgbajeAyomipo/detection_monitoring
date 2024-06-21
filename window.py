@@ -118,7 +118,7 @@ class ConfigFrame(VFrame):
         bottomHLay.addWidget(add)
 
     def fillModels(self):
-        models = [a for a in os.listdir(MODELS) if a.endswith(".engine")]
+        models = [a for a in os.listdir(MODELS) if a.endswith(".pt")]
         self.modelCombox.clear()
         self.modelCombox.addItems(models)
 
