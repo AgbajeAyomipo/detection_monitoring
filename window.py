@@ -126,7 +126,9 @@ class ConfigFrame(VFrame):
         if model and model in models:
             self.modelCombox.setCurrentText(model)
         else:
-            self.onModelChanged("")
+            model = models[0]
+            
+        self.onModelChanged("")
 
     def onAddFeed(self):
         self.window().addFeed()
