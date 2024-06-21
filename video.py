@@ -13,6 +13,7 @@ class VideoThread(QThread):
 
         self.rtspLink = rtspLink
         self.model = YOLO(model)
+        self.model.to("cuda")
         self.conf: float = 0.4
 
         self.cap: cv2.VideoCapture = None
